@@ -8,12 +8,19 @@ public class Person {
 	private Address address;
 	
 	
+	
 	public void setAddress(Address address) {
 		this.address = address;
 	}
 
 	public void setTaxId(int taxId) {
 		this.taxId = taxId;
+	}
+	
+	public static Person getInstance(int id, String name) {
+		System.out.println("Person Using Factory Method");
+		return new Person(id,name);
+		
 	}
 
 	public Person(int id, String name) {
@@ -22,6 +29,10 @@ public class Person {
 		this.name = name;
 	}
 	
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void onCreate() {
 		System.out.println("Person created: " + this);
 	}

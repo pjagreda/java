@@ -13,18 +13,18 @@ public class app {
 		
 		
 		Person person = (Person)context.getBean("person");
-		person.speak();
+//		person.speak();
 		
-		Address address = (Address)context.getBean("address");
+		//Address address = (Address)context.getBean("address");
 		
-		Person person2 = (Person)context.getBean("person");
+//		Person person2 = (Person)context.getBean("person");
 		
 		
-		person2.setTaxId(999);
+//		person2.setTaxId(999);
 		
 		System.out.println(person);
-		System.out.println(person2);
-		System.out.println(address);
+//		System.out.println(person2);
+//		System.out.println(address);
 		
 		//((FileSystemXmlApplicationContext)context).close();
 		((ClassPathXmlApplicationContext)context).close();
