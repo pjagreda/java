@@ -2,7 +2,7 @@ package com.maven.spring.test.Helloworld;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+//import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class app {
 
@@ -14,7 +14,9 @@ public class app {
 		
 		Person person = (Person)context.getBean("person");
 		person.speak();
-				
+		
+		System.out.println(person);
+		
 		//((FileSystemXmlApplicationContext)context).close();
 		((ClassPathXmlApplicationContext)context).close();
 	}
