@@ -7,5 +7,7 @@
 	<bean id="person" class="com.maven.spring.test.Helloworld.Person">
 		<constructor-arg name="id" type="int" value="666"></constructor-arg>
 		<constructor-arg name="name" type="String" value="Jose"></constructor-arg>
+		
+		<property name="taxId" value="123"></property>
 	</bean>
 </beans>
