@@ -4,10 +4,17 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="person" class="com.maven.spring.test.Helloworld.Person">
+	<bean id="person" class="com.maven.spring.test.Helloworld.Person"
+		scope="prototype">
 		<constructor-arg name="id" type="int" value="666"></constructor-arg>
 		<constructor-arg name="name" type="String" value="Jose"></constructor-arg>
 		
 		<property name="taxId" value="123"></property>
+		<property name="address" ref="address"></property>
+	</bean>
+	<bean id="address"
+		class="com.maven.spring.test.Helloworld.Address">
+	<constructor-arg name="street" value="8-28"></constructor-arg>
+	<constructor-arg name="postcode" value="123456789"></constructor-arg>
 	</bean>
 </beans>
