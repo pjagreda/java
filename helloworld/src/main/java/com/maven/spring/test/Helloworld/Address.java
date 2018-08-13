@@ -14,5 +14,8 @@ public class Address {
 		return "Address [street=" + street + ", postcode=" + postcode + "]";
 	}
 	
-	
+	public void init()
+	{
+		System.out.println("Init Address");
+	}
 }

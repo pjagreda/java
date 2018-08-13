@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-destroy-method="destroy" default-init-method="init">
 
 
 	<bean id="person" class="com.maven.spring.test.Helloworld.Person"
-		scope="prototype">
+		scope="singleton" init-method="onCreate" destroy-method="onDestroy">
 		<constructor-arg name="id" type="int" value="666"></constructor-arg>
 		<constructor-arg name="name" type="String" value="Jose"></constructor-arg>
 		
