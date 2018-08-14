@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-	default-destroy-method="destroy" default-init-method="init">
+	default-destroy-method="destroy" default-init-method="init"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
 	<bean id="person" class="com.maven.spring.test.Helloworld.Person"
@@ -29,6 +30,10 @@
 		class="com.maven.spring.test.Helloworld.Address">
 	<constructor-arg name="street" value="8-28"></constructor-arg>
 	<constructor-arg name="postcode" value="123456789"></constructor-arg>
+	</bean>
+	<bean id="address2"
+		class="com.maven.spring.test.Helloworld.Address"
+		p:street="5-22" p:postcode="65478">
 	</bean>
 	<bean id="personfactory"
 		class="com.maven.spring.test.Helloworld.PersonFactory">

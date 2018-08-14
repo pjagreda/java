@@ -18,4 +18,14 @@ public class Address {
 	{
 		System.out.println("Init Address");
 	}
+	
+	public Address() {
+		
+	}
+	public void setStreet(String street) {
+		this.street = street;
+	}
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
+	}
 }
