@@ -4,15 +4,16 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="jungle" class="com.test.maven.spring.beansList.Jungle">
-		<property name="largest" ref="elephant"></property>
-		<property name="animals">
-			<list>
-				<ref bean="snake" />
-				<ref bean="elephant" />
-				<ref bean="lion" />
-			</list>
-		</property>
+	<bean id="junglemap"
+		class="com.test.maven.spring.beansList.JungleMap">
+
+	<property name="foods">
+		<props>
+			<prop key="gorilla">banana</prop>
+			<prop key="cat">mouse</prop>
+			<prop key="snake">eggs</prop>
+		</props>
+	</property>
 	</bean>
 
 
